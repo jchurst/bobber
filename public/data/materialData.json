@@ -1,0 +1,15 @@
+{ "materials": [
+  
+		{ "name": "Acrylic", "class": "page-scroll", "density": "1.18 g/cm3" },
+		{ "name": "Aluminum", "class": "page-scroll", "density": "2712.63 kg/m3" },
+  { "name": "Cellofoam<sup>&reg;</sup>  Polyethylene resin", "class": "page-scroll", "density": "935 kg/m3" },
+		{ "name": "HDPE",  "class": "page-scroll", "density": "0.95 g/cm3" },
+  { "name": "Oak, Amer. Red", "class": "page-scroll",	"density": "740 kg/m3"},
+  { "name": "Pine, Yellow", "class": "page-scroll", "density": "420 kg/m3"},
+		{ "name": "Polycarbonate", "class": "page-scroll", "density": "1.21 g/cm3" },
+		{ "name": "Stainless Steel", "class": "page-scroll", "density": "7861.1 kg/m3" },
+		{ "name": "UHMW Polyethylene", "class": "page-scroll", "density": "0.945 g/cm3" },
+		{ "name": "Walnut, Amer. Black", "class": "page-scroll", "density": "630 kg/m3"}
+  
+	]
+}

@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1" name="viewport">
+	
+	<title>Determine Material Buoyancy</title>
+	
+	<!-- Bootstrap -->
+	<link href="css/bootstrap.css" rel="stylesheet">
+	<link href="css/font-awesome.min.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="js/jquery.js"></script>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Calc. Scripts -->
+ <script src="js/anchor.min.js"></script>
+	<script src="js/quantities.js"></script>
+	<script src="js/math.min.js"></script>
+	<script src="js/buoyancy.js"></script>
+	<!-- Page Scripts -->
+ <script src="js/jquery.easing.js"></script>
+	<script src="js/classie.js"></script>
+	<script src="js/scroll-ease.js"></script>
+	<link href="images/favicon.png" rel="shortcut icon">
+	<link href="images/favicon.png" rel="apple-touch-icon">
+	
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+	<section id="home">
+		<div>
+			&nbsp;
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="well">
+						<div class="row text-center">
+							<h2 class="text-center">Determine Material Buoyancy</h2>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="top">
+			&nbsp;
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="well text-center">
+						<p>This application determines the buoyancy of an object based on it’s displacement.<br>
+						It can also use the object's weight, mass or density to determine the net buoyancy.</p>
+						
+						<h4><a class="page-scroll" href="#bottom" title="Click to scroll down..."><i aria-hidden="true" class="fa fa-link"></i>&nbsp;&nbsp;<b>Common Materials - Density</b>&nbsp;&nbsp;<i aria-hidden="true" class="fa fa-hand-o-down"></i></a></h4>
+						<form id="jqbsForm" name="jqbsForm">
+							<div class="form-group has-feedback has-success text-center" id="volumeInputGroup">
+								<label for="volumeInput">Displacement of Object</label> <input aria-describedby="inputSuccess1Status" class="form-control text-center" id="volumeInput" onkeyup="runCalcs()" type="text" value="50 in^3"> <span class="glyphicon form-control-feedback glyphicon-ok" id="volumeInputIcon" aria-hidden="true"></span> <span class="sr-only" id="inputSuccess1Status">(success)</span> <span class="help-block" id="helpBlock1">Volume followed by unit. (i.e. "0.9 m^3" or "32 in^3")</span>
+							</div>
+							<hr>
+							<div class="form-group has-feedback has-success text-center" id="weightInputGroup">
+								<label for="weightInput">Object Weight, Mass or Density</label> <input aria-describedby="inputSuccess2Status" class="form-control text-center" id="weightInput" onkeyup="runCalcs()" type="text" value="12 lb/ft^3"> <span class="glyphicon form-control-feedback glyphicon-ok" id="weightInputIcon" aria-hidden="true"></span> <span class="sr-only" id="inputSuccess2Status">(success)</span> <span class="help-block" id="helpBlock2">Weight or density followed by unit. (i.e. "3.5 kg" or "19 lb/ft^3")</span>
+							</div>
+							<hr>
+							<div class="btn-group" data-toggle="buttons">
+								<label class="btn btn-primary btn-lft btn-wahoo active"><input checked="checked" id="freshwater" name="waterType" onchange="runCalcs()" type="radio" value="fresh"> Freshwater</label> <label class="btn btn-primary btn-rt btn-wahoo"><input id="saltwater" name="waterType" onchange="runCalcs()" type="radio" value="salt"> Saltwater</label>
+							</div>
+						</form>
+						<hr>
+						<div class="row text-center">
+							<div class="col-sm-6">
+								<table class="table table-hover table-condensed table table-condensed">
+									<tbody>
+										<tr>
+											<th class="text-center">Net Buoyancy</th>
+										</tr>
+									</tbody>
+									<tbody id="netBuoyancyTableContent">
+										<tr>
+											<td>0.66 kg</td>
+										</tr>
+										<tr>
+											<td>661.83 g</td>
+										</tr>
+										<tr>
+											<td>1.46 lbs</td>
+										</tr>
+										<tr>
+											<td>23.35 oz</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="col-sm-6">
+								<table class="table table-hover table-condensed table table-condensed">
+									<tbody>
+										<tr>
+											<th class="text-center">Buoyancy</th>
+										</tr>
+									</tbody>
+									<tbody id="buoyancyTableContent">
+										<tr>
+											<td>0.82 kg</td>
+										</tr>
+										<tr>
+											<td>819.33 g</td>
+										</tr>
+										<tr>
+											<td>1.81 lbs</td>
+										</tr>
+										<tr>
+											<td>28.9 oz</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div class="row text-center">
+							<div class="col-sm-6">
+								<table class="table table-hover table-condensed table table-condensed">
+									<tbody>
+										<tr>
+											<th class="text-center">Weight</th>
+										</tr>
+									</tbody>
+									<tbody id="weightTableContent">
+										<tr>
+											<td>0.16 kg</td>
+										</tr>
+										<tr>
+											<td>157.5 g</td>
+										</tr>
+										<tr>
+											<td>0.35 lbs</td>
+										</tr>
+										<tr>
+											<td>5.56 oz</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="col-sm-6">
+								<table class="table table-hover table-condensed table table-condensed">
+									<tbody>
+										<tr>
+											<th class="text-center">Average Density</th>
+										</tr>
+									</tbody>
+									<tbody id="densityTableContent">
+										<tr>
+											<td>192.22 kg/m3</td>
+										</tr>
+										<tr>
+											<td>0.19 g/ml</td>
+										</tr>
+										<tr>
+											<td>12 lbs/ft3</td>
+										</tr>
+										<tr>
+											<td>0.11 oz/in3</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="bottom">
+		<div class="row">
+			<div class="col-lg-12 text-center">
+				<h4><a class="page-scroll" href="#home" title="Click to scroll up..."><i aria-hidden="true" class="fa fa-link"></i>&nbsp;&nbsp;<b>Top</b>&nbsp;&nbsp;<i aria-hidden="true" class="fa fa-hand-o-up"></i></a></h4>
+				<h3>Common Materials - Density</h3>
+				<table class="table table-hover table-condensed table table-condensed">
+					<tbody>
+						<tr>
+							<th class="text-center">Material</th>
+							<th class="text-center" colspan="2">Density <span class="small">(click to determine buoyancy)</span></th>
+						</tr>
+					</tbody>
+					<tbody id="materialTableContent">
+						<tr>
+							<td>Acrylic</td>
+							<td>
+								<a class="page-scroll" href="#top" onclick="setDensity(&quot;1180 kg/m3&quot;)">1180 kg/m3</a>
+							</td>
+							<td>
+								<a class="page-scroll" href="#top" onclick="setDensity(&quot;73.66 lbs/ft3&quot;)">73.66 lbs/ft3</a>
+							</td>
+						</tr>
+						<tr>
+							<td>Aluminum</td>
+							<td>
+								<a class="page-scroll" href="#top" onclick="setDensity(&quot;2712.63 kg/m3&quot;)">2712.63 kg/m3</a>
+							</td>
+							<td>
+								<a class="page-scroll" href="#top" onclick="setDensity(&quot;169.34 lbs/ft3&quot;)">169.34 lbs/ft3</a>
+							</td>
+						</tr>
+						<tr>
+							<td>Cellofoam<sup>&reg;</sup> Polyethylene resin</td>
+							<td>
+								<a class="page-scroll" href="#top" onclick="setDensity(&quot;935 kg/m3&quot;)">935 kg/m3</a>
+							</td>
+							<td>
+								<a class="page-scroll" href="#top" onclick="setDensity(&quot;58.37 lbs/ft3&quot;)">58.37 lbs/ft3</a>
+							</td>
+						</tr>
+						<tr>
+							<td>HDPE</td>
+							<td>
+								<a class="page-scroll" href="#top" onclick="setDensity(&quot;950 kg/m3&quot;)">950 kg/m3</a>
+							</td>
+							<td>
+								<a class="page-scroll" href="#top" onclick="setDensity(&quot;59.31 lbs/ft3&quot;)">59.31 lbs/ft3</a>
+							</td>
+						</tr>
+						<tr>
+							<td>Oak, American Red</td>
+							<td>
+								<a class="page-scroll" href="#top" onclick="setDensity(&quot;1024 kg/m3&quot;)">740 kg/m3</a>
+							</td>
+							<td>
+								<a class="page-scroll" href="#top" onclick="setDensity(&quot;63.93 lbs/ft3&quot;)">46.2 lbs/ft3</a>
+							</td>
+						</tr>
+						<tr>
+							<td>Pine, yellow</td>
+							<td>
+								<a class="page-scroll" href="#top" onclick="setDensity(&quot;420 kg/m3&quot;)">420 kg/m3</a>
+							</td>
+							<td>
+								<a class="page-scroll" href="#top" onclick="setDensity(&quot;26.22 lbs/ft3&quot;)">26.22 lbs/ft3</a>
+							</td>
+						</tr>
+						<tr>
+							<td>Polycarbonate</td>
+							<td>
+								<a class="page-scroll" href="#top" onclick="setDensity(&quot;1210 kg/m3&quot;)">1210 kg/m3</a>
+							</td>
+							<td>
+								<a class="page-scroll" href="#top" onclick="setDensity(&quot;75.54 lbs/ft3&quot;)">75.54 lbs/ft3</a>
+							</td>
+						</tr>
+						<tr>
+							<td>Stainless Steel</td>
+							<td>
+								<a class="page-scroll" href="#top" onclick="setDensity(&quot;7861.1 kg/m3&quot;)">7861.1 kg/m3</a>
+							</td>
+							<td>
+								<a class="page-scroll" href="#top" onclick="setDensity(&quot;490.75 lbs/ft3&quot;)">490.75 lbs/ft3</a>
+							</td>
+						</tr>
+						<tr>
+							<td>UHMW Polyethylene</td>
+							<td>
+								<a class="page-scroll" href="#top" onclick="setDensity(&quot;945 kg/m3&quot;)">945 kg/m3</a>
+							</td>
+							<td>
+								<a class="page-scroll" href="#top" onclick="setDensity(&quot;58.99 lbs/ft3&quot;)">58.99 lbs/ft3</a>
+							</td>
+						</tr>
+						<tr>
+							<td>Walnut, American Black</td>
+							<td>
+								<a class="page-scroll" href="#top" onclick="setDensity(&quot;630 kg/m3&quot;)">630 kg/m3</a>
+							</td>
+							<td>
+								<a class="page-scroll" href="#top" onclick="setDensity(&quot;39.33 lbs/ft3&quot;)">39.33 lbs/ft3</a>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<hr>
+			</div>
+		</div>
+	</section>
+	<hr>
+	<footer class="text-center">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+					<p>Powered by <a href="http://www.wahoodocks.com" target="new">Wahoo Docks</a> - 
+					<a href="http://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fwww.jchurst.co%2Fbcal%2F&profile=css3svg"><img style="border:0;width:88px;height:31px" src="https://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS!" /></a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>

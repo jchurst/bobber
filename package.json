@@ -1,0 +1,28 @@
+{
+  "name": "DetermineMaterialBuoyancy",
+  "version": "1.0.0",
+  "description": "Determine Material Buoyancy",
+  "main": "server.js",
+  "author": "JCHurst",
+  "dependencies": {
+    "express": "^4.16.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jchurst/determine-material-buoyancy"
+  },
+  "keywords": [
+    "JCHurst",
+    "API",
+    "Buoyancy"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jchurst/determine-material-buoyancy/issues"
+  },
+   "homepage": "https://github.com/jchurst/determine-material-buoyancy#readme"
+}
