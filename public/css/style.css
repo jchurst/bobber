@@ -33,6 +33,10 @@ a:visited {
  text-decoration: none
 }
 
+p.spacer {
+font-size:8px;
+margin:5px
+}
 
 i {
 color: #3689c2
@@ -40,6 +44,14 @@ color: #3689c2
 
 i:hover {
 color: #0a3b67
+}
+
+i.white {
+color: #fff
+}
+
+i.white:hover {
+color: #fff
 }
 
 #volumeInputIcon, .glyphicon, .glyphicon-ok {
@@ -67,17 +79,21 @@ font-style: italic
   color: #fff;
   background-color: #0d4e88;
   border-color: #06243f;
+  border-radius:25px;
+  outline:none !important
 }
 .btn-wahoo:focus,
 .btn-wahoo.focus {
   color: #fff;
   background-color: #136cbc;
   border-color: #06243F;
+  outline:none !important
 }
 .btn-wahoo:hover {
   color: #fff;
   background-color: #3689c2;
   border-color: #06243F;
+  outline:none !important
 }
 .btn-wahoo:active,
 .btn-wahoo.active,
@@ -85,6 +101,7 @@ font-style: italic
   color: #fff;
   background-color: #136cbc;
   border-color: #06243F;
+  outline:none !important
 }
 .btn-wahoo:active:hover,
 .btn-wahoo.active:hover,
@@ -98,11 +115,13 @@ font-style: italic
   color: #fff;
   background-color: #3689c2;
   border-color: #06243f;
+  outline:none !important
 }
 .btn-wahoo:active,
 .btn-wahoo.active,
 .open > .dropdown-toggle.btn-wahoo {
   background-image: none;
+  outline:none !important
 }
 .btn-wahoo.disabled:hover,
 .btn-wahoo[disabled]:hover,
@@ -115,16 +134,19 @@ fieldset[disabled] .btn-wahoo:focus,
 fieldset[disabled] .btn-wahoo.focus {
   background-color: #337ab7;
   border-color: #2e6da4;
+  outline:none !important
 }
 .btn-wahoo .badge {
   color: #337ab7;
   background-color: #fff;
+  outline:none !important
 }
 
 /* FORMS */
 
 label.btn {
 width:120px;
+outline:none !important
 }
 
 label.btn-lft {
@@ -191,7 +213,8 @@ height:150px;
 }
 
 #jqbsForm input, 
-#jqbsForm textarea, 
+#jqbsForm textarea,
+#jqbsForm input.radio-field,
 #jqbsForm .textarea-field, 
 #jqbsForm .select-field {
 width:100%;
@@ -203,7 +226,7 @@ border: 1px solid #C2C2C2;
 box-shadow: 1px 1px 4px #EBEBEB;
 /*-moz-box-shadow: 1px 1px 4px #EBEBEB;
 -webkit-box-shadow: 1px 1px 4px #EBEBEB;*/
-border-radius: 3px;
+border-radius: 10px;
 /*-webkit-border-radius: 3px;
 -moz-border-radius: 3px;*/
 padding: 7px;
@@ -215,19 +238,17 @@ width:50%;
 margin:0 auto 0 auto
 }
 
-#jqbsForm input:focus, 
+#jqbsForm input:focus,
 #jqbsForm textarea:focus, 
 #jqbsForm .textarea-field:focus,  
 #jqbsForm .select-field:focus{
 border: 1px solid #3689c2;
 box-shadow: 0px 0px 3px 3px rgba(54, 137, 194, 0.5);
-outline:none !important
 }
 
 #jqbsForm input.radio-field {
 border:0;
 outline:none !important;
-max-width:70px
 }
 
 #jqbsForm input.radio-field:hover {
