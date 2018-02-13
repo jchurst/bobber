@@ -10,4 +10,4 @@ Created by JC Hurst
 ##### • Determine the buoyancy of an object based on it’s displacement
 ##### • Use the object's weight or density to determine the net buoyancy
 
-[Project on Github](https://github.com/jchurst/floaty)
+[Demo](https://bobber.glitch.me)
