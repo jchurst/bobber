@@ -5,12 +5,12 @@
 	<meta content="IE=edge" http-equiv="X-UA-Compatible">
 	<meta content="width=device-width, initial-scale=1" name="viewport">
 	
-	<title>Determine Material Buoyancy</title>
+	<title>BOBBER</title>
 	
 	<!-- Bootstrap -->
-	<link href="css/bootstrap.css" rel="stylesheet">
-	<link href="css/font-awesome.min.css" rel="stylesheet">
-	<link href="css/style.css" rel="stylesheet">
+	<link href="bootstrap.css" rel="stylesheet">
+	<link href="font-awesome.min.css" rel="stylesheet">
+	<link href="style.css" rel="stylesheet">
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 	<script src="js/jquery.js"></script>
 	<!-- Include all compiled plugins (below), or include individual files as needed -->
@@ -24,8 +24,8 @@
  <script src="js/jquery.easing.js"></script>
 	<script src="js/classie.js"></script>
 	<script src="js/scroll-ease.js"></script>
-	<link href="images/favicon.png" rel="shortcut icon">
-	<link href="images/favicon.png" rel="apple-touch-icon">
+	<link href="https://cdn.glitch.com/6f307848-6efa-44a6-9b84-a815bc226946%2Ffavicon.png?1518488949276" rel="shortcut icon">
+	<link href="https://cdn.glitch.com/6f307848-6efa-44a6-9b84-a815bc226946%2Ffavicon.png?1518488949276" rel="apple-touch-icon">
 	
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -43,11 +43,9 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12">
-					<div class="well">
 						<div class="row text-center">
-							<h2 class="text-center">Determine Material Buoyancy</h2>
+							<h3 class="text-center hit-the-floor">BOBBER</h3>
 						</div>
-					</div>
 				</div>
 			</div>
 		</div>
@@ -58,8 +56,8 @@
 			<div class="row">
 				<div class="col-lg-12">
 					<div class="well text-center">
-						<p>This application determines the buoyancy of an object based on it’s displacement.<br>
-						It can also use the object's weight, mass or density to determine the net buoyancy.</p>
+						<p>Determine the buoyancy of an object based on it’s displacement.<br>
+						Use the object's weight or density to determine the net buoyancy.</p>
 						<p class="spacer">&nbsp;</p>
       <a class="page-scroll" href="#bottom" title="Click to scroll down..."><button type="button" class="btn btn-sm btn-wahoo"><i aria-hidden="true" class="fa fa-hand-o-down white"></i>&nbsp;&nbsp;<b>Common Materials - Density</b>&nbsp;&nbsp;<i aria-hidden="true" class="fa fa-hand-o-down white"></i></button></a>
 						<form id="jqbsForm" name="jqbsForm">
@@ -68,7 +66,7 @@
 							</div>
 							<p class="spacer">&nbsp;</p>
 							<div class="form-group has-feedback has-success text-center" id="weightInputGroup">
-								<label for="weightInput">Object Weight, Mass or Density</label> <input aria-describedby="inputSuccess2Status" class="form-control text-center" id="weightInput" onkeyup="runCalcs()" type="text" value="12 lb/ft^3"> <span class="glyphicon form-control-feedback glyphicon-ok" id="weightInputIcon" aria-hidden="true"></span> <span class="sr-only" id="inputSuccess2Status">(success)</span> <span class="help-block" id="helpBlock2">Weight or density followed by unit. (i.e. "3.5 kg" or "19 lb/ft^3")</span>
+								<label for="weightInput">Object Weight or Density</label> <input aria-describedby="inputSuccess2Status" class="form-control text-center" id="weightInput" onkeyup="runCalcs()" type="text" value="12 lb/ft^3"> <span class="glyphicon form-control-feedback glyphicon-ok" id="weightInputIcon" aria-hidden="true"></span> <span class="sr-only" id="inputSuccess2Status">(success)</span> <span class="help-block" id="helpBlock2">Weight or density followed by unit. (i.e. "3.5 kg" or "19 lb/ft^3")</span>
 							</div>
 							<p class="spacer">&nbsp;</p>
 							<div class="btn-group" data-toggle="buttons">
@@ -178,8 +176,10 @@
 		</div>
 	</section>
 	<section id="bottom">
+	<div class="container">
 		<div class="row">
 			<div class="col-lg-12 text-center">
+			<div class="well text-center">
 			<p class="spacer">&nbsp;</p>
    <a class="page-scroll" href="#home" title="Click to scroll up..."><button type="button" class="btn btn-sm btn-wahoo"><i aria-hidden="true" class="fa fa-hand-o-up white"></i>&nbsp;&nbsp;<b>Top</b>&nbsp;&nbsp;<i aria-hidden="true" class="fa fa-hand-o-up white"></i></button></a>
 				<h3>Common Materials - Density</h3>
@@ -283,16 +283,30 @@
 						</tr>
 					</tbody>
 				</table>
+				
+    </div>
 				<hr>
 			</div>
 		</div>
+  </div>
 	</section>
 	<hr>
+	<section>
+		<div class="row">
+			<div class="col-lg-12 text-center">
+   <p>This application uses the following JavaScript libraries: 
+   <a href="https://github.com/josdejong/mathjs" target="new">MathJS</a> | 
+   <a href="https://github.com/gentooboontoo/js-quantities" target="new">QuantitiesJS</a>
+   </p>
+   </div>
+  </div>
+ </section>
+ <hr>
 	<footer class="text-center">
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-12">
-					<p>Powered by <a href="http://www.wahoodocks.com" target="new">Wahoo Docks</a> - 
+					<p>BOBBER - Determine material buoyancy&nbsp;&nbsp;  
 					<a href="http://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fwww.jchurst.co%2Fbcal%2F&profile=css3svg" target="new"><img style="border:0;width:88px;height:31px" src="https://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS!" /></a>
 					</p>
 				</div>
