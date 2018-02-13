@@ -1,0 +1,284 @@
+body {
+position:relative;
+letter-spacing: 1px
+}
+
+h1 {
+font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+font-style: normal;
+font-variant: normal;
+font-weight: normal;
+padding-left: 0.375em; 
+}
+
+.glyphicon, .glyphicon-ok {
+display:none
+}
+
+.small {
+font-size:12px;
+font-style: italic
+}
+
+.well, .jumbotron {
+border-radius: 20px !important
+}
+
+a {
+	color: #3689c2 !important;
+ text-decoration: none
+}
+a:hover {
+	color: #0a3b67 !important;
+ text-decoration: none
+}
+a:visited {
+	color: #3689c2 !important;
+ text-decoration: none
+}
+
+p.spacer {
+font-size:8px;
+margin:5px
+}
+
+i {
+color: #3689c2
+}
+
+i:hover {
+color: #0a3b67
+}
+
+i.white {
+color: #fff
+}
+
+i.white:hover {
+color: #fff
+}
+
+#volumeInputIcon, .glyphicon, .glyphicon-ok {
+color: #3689c2 !important
+}
+
+.credit {
+font-size:12px;
+color:#777
+}
+
+a.navbar-brand {
+color:#fff
+}
+
+span.help-block {
+color:#0a3b67 !important;
+font-size:12px;
+font-style: italic
+}
+
+/* BUTTONS */
+
+.btn-wahoo {
+  color: #fff;
+  background-color: #0d4e88;
+  border-color: #06243f;
+  border-radius:25px;
+  outline:none !important
+}
+.btn-wahoo:focus,
+.btn-wahoo.focus {
+  color: #fff;
+  background-color: #136cbc;
+  border-color: #06243F;
+  outline:none !important
+}
+.btn-wahoo:hover {
+  color: #fff;
+  background-color: #3689c2;
+  border-color: #06243F;
+  outline:none !important
+}
+.btn-wahoo:active,
+.btn-wahoo.active,
+.open > .dropdown-toggle.btn-wahoo {
+  color: #fff;
+  background-color: #136cbc;
+  border-color: #06243F;
+  outline:none !important
+}
+.btn-wahoo:active:hover,
+.btn-wahoo.active:hover,
+.open > .dropdown-toggle.btn-wahoo:hover,
+.btn-wahoo:active:focus,
+.btn-wahoo.active:focus,
+.open > .dropdown-toggle.btn-wahoo:focus,
+.btn-wahoo:active.focus,
+.btn-wahoo.active.focus,
+.open > .dropdown-toggle.btn-wahoo.focus {
+  color: #fff;
+  background-color: #3689c2;
+  border-color: #06243f;
+  outline:none !important
+}
+.btn-wahoo:active,
+.btn-wahoo.active,
+.open > .dropdown-toggle.btn-wahoo {
+  background-image: none;
+  outline:none !important
+}
+.btn-wahoo.disabled:hover,
+.btn-wahoo[disabled]:hover,
+fieldset[disabled] .btn-wahoo:hover,
+.btn-wahoo.disabled:focus,
+.btn-wahoo[disabled]:focus,
+fieldset[disabled] .btn-wahoo:focus,
+.btn-wahoo.disabled.focus,
+.btn-wahoo[disabled].focus,
+fieldset[disabled] .btn-wahoo.focus {
+  background-color: #337ab7;
+  border-color: #2e6da4;
+  outline:none !important
+}
+.btn-wahoo .badge {
+  color: #337ab7;
+  background-color: #fff;
+  outline:none !important
+}
+
+/* FORMS */
+
+label.btn {
+width:120px;
+outline:none !important
+}
+
+label.btn-lft {
+border-top-left-radius:25px;
+border-bottom-left-radius:25px
+}
+
+label.btn-rt {
+border-top-right-radius:25px;
+border-bottom-right-radius:25px
+}
+
+.btn-group {
+border-radius:30px !important
+}
+
+.input-group-addon {
+background-color:#f8f8f8;
+}
+.outer-margin {
+   margin:3px;
+}
+
+::-webkit-input-placeholder {
+    color:#888;
+}
+:-moz-placeholder {
+    color:#888;
+}
+::-moz-placeholder {
+    color:#888;
+}
+:-ms-input-placeholder {
+    color:#888;
+}
+/* Placeholder disappears on focus */
+
+input:focus::-webkit-input-placeholder  {color:transparent !IMPORTANT;}
+input:focus::-moz-placeholder   {color:transparent !IMPORTANT;}
+input:-moz-placeholder   {color:transparent !IMPORTANT;}
+textarea:focus::-webkit-input-placeholder  {color:transparent !IMPORTANT;}
+textarea:focus::-moz-placeholder   {color:transparent !IMPORTANT;}
+textarea:-moz-placeholder   {color:transparent !IMPORTANT;}
+textarea{ min-height:70px !IMPORTANT;}
+input.file[type="text"] {
+  background-color:white;
+  color:#000;
+  border-radius:3px !IMPORTANT;    
+}
+
+.input-row {
+  display:block;
+  min-height:85px;
+  text-align: left;
+}
+
+#jqbsForm {
+width:90%;
+margin:20px auto 0 auto;
+}
+
+#jqbsForm textarea {
+height:150px;
+}
+
+#jqbsForm input, 
+#jqbsForm textarea,
+#jqbsForm input.radio-field,
+#jqbsForm .textarea-field, 
+#jqbsForm .select-field {
+width:100%;
+margin:0 auto 0 auto;
+/*-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;*/
+box-sizing: border-box;
+border: 1px solid #C2C2C2;
+box-shadow: 1px 1px 4px #EBEBEB;
+/*-moz-box-shadow: 1px 1px 4px #EBEBEB;
+-webkit-box-shadow: 1px 1px 4px #EBEBEB;*/
+border-radius: 10px;
+/*-webkit-border-radius: 3px;
+-moz-border-radius: 3px;*/
+padding: 7px;
+outline: none;
+}
+
+#volumeInputGroup, #weightInputGroup {
+width:50%;
+margin:0 auto 0 auto
+}
+
+#jqbsForm input:focus,
+#jqbsForm textarea:focus, 
+#jqbsForm .textarea-field:focus,  
+#jqbsForm .select-field:focus{
+border: 1px solid #3689c2;
+box-shadow: 0px 0px 3px 3px rgba(54, 137, 194, 0.5);
+}
+
+#jqbsForm input.radio-field {
+border:0;
+outline:none !important;
+}
+
+#jqbsForm input.radio-field:hover {
+border:0;
+outline:none !important;
+box-shadow: 0px 0px 3px 3px rgba(54, 137, 194, 0) !important;
+}
+
+#jqbsForm input.radio-field:focus {
+border:0;
+outline:none !important;
+box-shadow: 0px 0px 3px 3px rgba(54, 137, 194, 0) !important;
+}
+
+
+@media (max-width: 915px) {
+
+#jqbsForm input, 
+#jqbsForm textarea, 
+#jqbsForm .textarea-field, 
+#jqbsForm .select-field {
+width:100%
+}
+
+#volumeInputGroup, #weightInputGroup {
+width:100%
+}
+
+}

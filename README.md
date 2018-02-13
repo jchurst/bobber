@@ -3,12 +3,11 @@
 
 Created by JC Hurst
 
-[Github](https://github.com/jchurst) | [FreeCodeCamp](http://www.freecodecamp.com/jchurst) | [CodePen](http://codepen.io/jchurst/) | [LinkedIn](https://www.linkedin.com/in/jchurst) | [Webite](http://hurstcreative.com/) | [E-Mail](mailto:jchurstmail@gmail.com)
+[Github](https://github.com/jchurst) | [CodePen](http://codepen.io/jchurst/) | [LinkedIn](https://www.linkedin.com/in/jchurst) | [Webite](http://hurstcreative.com/) | [E-Mail](mailto:jchurstmail@gmail.com)
 
-# Determine Material Buoyancy
+# FLOATY - Determine material buoyancy
 
-1- This application determines the buoyancy of an object based on it’s displacement.
+• Determine the buoyancy of an object based on it’s displacement
+• Use the object's weight or density to determine the net buoyancy
 
-2- It can also use the object's weight, mass or density to determine the net buoyancy.
-
-Credit: This project uses the [js-quantities library](https://github.com/gentooboontoo/js-quantities) by gentooboontoo for unit conversions.
+[Project on Github](https://github.com/jchurst/floaty)
